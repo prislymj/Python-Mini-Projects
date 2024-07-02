@@ -6,9 +6,10 @@ computer_wins = 0
 options = ["rock", "paper", "scissors"]
 
 while True:
-    user_input=input("Type rock/paper/scissors or Q to quit").lower()
+    user_input=input("Type rock/paper/scissors or Q to quit: ").lower()
+
     if user_input == ' q':
-        quit()
+        break
     
     if user_input not in ["rock", "paper", "scissors"]:
         continue
@@ -16,7 +17,7 @@ while True:
     random_number = random.randint(0,2)
     computer_pick = options[random_number]
 
-    print("Computer picked: ", computer_pick+".")
+    print("Computer picked:", computer_pick+".")
 
     if user_input == "rock" and computer_pick=="scissors":
         print("You won!")
